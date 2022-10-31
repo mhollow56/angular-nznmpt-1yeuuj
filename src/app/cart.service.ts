@@ -6,7 +6,7 @@ import { Product } from './products';
   providedIn: 'root',
 })
 export class CartService {
-  items: any;
+  items: Product[] = [];
   /* . . . */
   getShippingPrices() {
     return this.http.get<{ type: string; price: number }[]>(

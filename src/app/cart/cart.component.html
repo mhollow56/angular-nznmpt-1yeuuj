@@ -20,5 +20,8 @@
     <input id="address" type="text" formControlName="address" />
   </div>
 
-  <button class="button" type="submit">Purchase</button>
+  <form [formGroup]="checkoutForm">
+    <button class="button" type="submit">Purchase</button>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()"></form>
+  </form>
 </form>
